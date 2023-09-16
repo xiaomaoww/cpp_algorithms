@@ -4,7 +4,7 @@
 class BinarySearch
 {
 public:
-    std::pair<int, int> binary_search(int sorted_array[], int x, int low, int high)
+    static std::pair<int, int> search(int sorted_array[], int x, int low, int high)
     {
         int iterations = 0;
         
