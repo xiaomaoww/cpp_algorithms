@@ -1,8 +1,18 @@
 #include <cstdio>
 
 #include "BinarySearch/BinarySearch.h"
+#include "QuickSort/QuickSort.h"
+
+void test_quick_sort();
+void test_binary_search();
 
 int main()
+{
+    return 0;
+}
+
+
+void test_binary_search()
 {
     int sorted_array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     constexpr int x = 5;
@@ -13,7 +23,16 @@ int main()
         printf("Not found");
     else
         printf("Element is found at index %d in %d steps", result.first, result.second);
+}
 
+void test_quick_sort()
+{
+    int array[] = { 9, -13, 5, 2, 2, 18, -6, 0, 3 };
+    constexpr int n = std::size(array);
     
-    return 0;
+    QuickSort::sort(array, 0, n - 1);
+ 
+    for (int i = 0; i < n; i++) {
+        std::cout << array[i] << " ";
+    }
 }
